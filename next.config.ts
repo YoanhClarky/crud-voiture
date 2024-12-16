@@ -1,13 +1,13 @@
-// next.config.ts
-import type { NextConfig } from "next"
+import type { NextConfig } from "next";
 
 const config: NextConfig = {
     experimental: {
         serverActions: {
-            bodySizeLimit: '2mb', // ou la limite que vous souhaitez
-            allowedOrigins: ['*'] // ou les origines spécifiques que vous autorisez
+            bodySizeLimit: '2mb',
+            allowedOrigins: ['*']
         }
-    }
-}
+    },
+    swcMinify: false // Désactive la minification de SWC
+};
 
-export default config
+export default config;
