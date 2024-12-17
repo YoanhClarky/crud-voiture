@@ -10,10 +10,14 @@
     "typeorm": "typeorm-ts-node-commonjs"
   },
   "dependencies": {
+    "@auth/typeorm-adapter": "^2.7.4",
+    "@next-auth/typeorm-legacy-adapter": "^2.0.2",
+    "bcryptjs": "^2.4.3",
     "cuid": "^3.0.0",
     "dotenv": "^16.4.7",
     "mysql": "^2.18.1",
     "next": "^15.1.0",
+    "next-auth": "^4.24.11",
     "next-transpile-modules": "^10.0.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
