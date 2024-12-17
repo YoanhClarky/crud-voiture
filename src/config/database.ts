@@ -10,9 +10,9 @@ export const dbConfig = {
     type: "mysql" as const, // le "as const" est important ici
     host: process.env.DB_HOST || "localhost",
     port: parseInt(process.env.DB_PORT || "3306"),
-    username: process.env.DB_USERNAME || "root",
-    password: process.env.DB_PASSWORD || "",
-    database: process.env.DB_NAME || "crud_voiture",
+    username: process.env.DB_USERNAME || "testdb",
+    password: process.env.DB_PASSWORD || "#LSO97fZdpHTcj7rLUfJ8",
+    database: process.env.DB_NAME || "testdb",
     entities: [Voiture, User],
     synchronize: true,
     logging: true,
