@@ -1,17 +1,18 @@
 // src/config/database.ts
 import { DataSource } from "typeorm"
 import { Voiture } from "../models/Voiture" // Exemple d'entité
+import "dotenv/config";
 
 export const AppDataSource = new DataSource({
     type: "mysql", // ou "postgres", "sqlite", etc.
     host: process.env.DB_HOST || "localhost",
     port: parseInt(process.env.DB_PORT || "3306"),
-    username: process.env.DB_USERNAME || "root",
-    password: process.env.DB_PASSWORD || "",
-    database: process.env.DB_NAME || "ma_db",
+    username: process.env.DB_USERNAME || "testdb",
+    password: process.env.DB_PASSWORD || "#LSO97fZdpHTcj7rLUfJ8",
+    database: process.env.DB_NAME || "testdb",
     entities: [Voiture], // Listez toutes vos entités ici
     synchronize: true, // ⚠️ À utiliser uniquement en développement
-    logging: true,
+    logging: false,
     migrations: ["src/migrations/**/*.ts"],
     subscribers: ["src/subscribers/**/*.ts"],
 })

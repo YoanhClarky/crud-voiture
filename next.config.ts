@@ -7,7 +7,7 @@ const config: NextConfig = {
             allowedOrigins: ['*']
         }
     },
-    swcMinify: false // Désactive la minification de SWC
+    swcMinify: false, // Désactive la minification de SWC
 };
 
 export default config;
